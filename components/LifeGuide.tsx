@@ -162,7 +162,7 @@ export default function LifeGuide() {
         <div className="text-sm font-semibold text-slate-300 mb-3">Choose Your Path</div>
         <div className="space-y-3 mb-6">
           <button className="w-full text-left p-5 rounded-xl border border-[#d4a843]/40 bg-[#d4a843]/5 hover:bg-[#d4a843]/10 transition cursor-pointer">
-            <div className="flex items-center gap-2 mb-1"><span className="text-[#d4a843]">\u2605</span><span className="font-bold text-[#d4a843]">Talk to an Agent - Best Value</span></div>
+            <div className="flex items-center gap-2 mb-1"><span className="text-[#d4a843]">★</span><span className="font-bold text-[#d4a843]">Talk to an Agent - Best Value</span></div>
             <p className="text-xs text-slate-400">A licensed advisor confirms your rate and could save you ${q.sav.toLocaleString()}. Takes about 5 minutes.</p>
           </button>
           <button className="w-full text-left p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/8 transition cursor-pointer">
@@ -276,7 +276,7 @@ export default function LifeGuide() {
           <button onClick={next} className="flex-1 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-sm font-semibold hover:opacity-90 transition cursor-pointer">{step === 4 ? 'Get My Quote' : 'Continue'}</button>
         </div>
 
-        <div className="text-center text-xs text-slate-500 mt-4 pb-4">\ud83d\udd12 Secure \u00b7 Free \u00b7 No obligation</div>
+        <div className="text-center text-xs text-slate-500 mt-4 pb-4">🔒 Secure · Free · No obligation</div>
       </div>
     </div>
   )
