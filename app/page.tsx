@@ -10,6 +10,7 @@ import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
+import FloatingChat from '@/components/FloatingChat'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
+              <FloatingChat />
     </main>
   )
 }
