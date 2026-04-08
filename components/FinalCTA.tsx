@@ -25,12 +25,12 @@ export default function FinalCTA() {
           </a>
         </div>
 
-        <p className="text-gray-500 text-sm">No spam. No obligation. Takes 2 minutes. Licensed agents available Mon\u2013Fri 8am\u20138pm CT.</p>
+        <p className="text-gray-500 text-sm">No spam. No obligation. Takes 2 minutes. Licensed agents available Mon&ndash;Fri 8am&ndash;8pm CT.</p>
 
         <div className="flex items-center justify-center gap-6 mt-8 flex-wrap">
           {['30+ Carriers Compared', 'AM Best A+ Carriers', 'BBB A+ Accredited', '40 Years in Business'].map((t, i) => (
             <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
-              <span className="text-green-400">\u2713</span> {t}
+              <span className="text-green-400">&#10003;</span> {t}
             </div>
           ))}
         </div>
