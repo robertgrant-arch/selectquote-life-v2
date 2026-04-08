@@ -1,14 +1,20 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const handler = () => setIsOpen(true)
+    window.addEventListener('open-floating-chat', handler)
+    return () => window.removeEventListener('open-floating-chat', handler)
+  }, [])
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat Panel */}
       {isOpen && (
-        <div className="w-[380px] max-h-[560px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-[#0f172a] animate-in slide-in-from-bottom-4 fade-in duration-300">
+        <div className="w-[380px] max-h-[560px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-[#0f172a]">
           {/* Header */}
           <div className="flex items-center justify-between bg-[#0f172a] border-b border-white/10 px-4 py-3">
             <div className="flex items-center gap-3">
@@ -19,7 +25,7 @@ export default function FloatingChat() {
                 <p className="text-white text-sm font-semibold">SelectQuote Life Guide</p>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-                  <p className="text-slate-400 text-xs">AI-Powered &middot; Free &middot; No Obligation</p>
+                  <p className="text-slate-400 text-xs">AI-Powered · Free · No Obligation</p>
                 </div>
               </div>
             </div>
@@ -28,7 +34,7 @@ export default function FloatingChat() {
               className="text-slate-400 hover:text-white transition-colors w-7 h-7 flex items-center justify-center rounded-md hover:bg-white/10"
               aria-label="Close chat"
             >
-              &times;
+              ×
             </button>
           </div>
 
@@ -43,7 +49,7 @@ export default function FloatingChat() {
 
           {/* Footer */}
           <div className="bg-[#0f172a] border-t border-white/10 px-4 py-2 text-center">
-            <p className="text-slate-500 text-xs">Secure &middot; Free &middot; No obligation</p>
+            <p className="text-slate-500 text-xs">Secure · Free · No obligation</p>
           </div>
         </div>
       )}
@@ -53,7 +59,7 @@ export default function FloatingChat() {
         onClick={() => setIsOpen(!isOpen)}
         className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
           isOpen
-            ? 'bg-slate-700 hover:bg-slate-600 rotate-0'
+            ? 'bg-slate-700 hover:bg-slate-600'
             : 'bg-[#e8722a] hover:bg-[#d4661f] shadow-[#e8722a]/30'
         }`}
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
