@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import StatsBar from '@/components/StatsBar'
+import LifeGuide from '@/components/LifeGuide'
 import HowItWorks from '@/components/HowItWorks'
 import WhySelectQuote from '@/components/WhySelectQuote'
 import AgentSection from '@/components/AgentSection'
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <StatsBar />
+      <LifeGuide />
       <HowItWorks />
       <WhySelectQuote />
       <AgentSection />
