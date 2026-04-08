@@ -54,7 +54,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-600 text-xs">\u00A9 2025 SelectQuote Insurance Services, Inc. All rights reserved.</p>
+            <p className="text-gray-600 text-xs">&copy; 2025 SelectQuote Insurance Services, Inc. All rights reserved.</p>
             <div className="flex gap-4 text-xs text-gray-500">
               <a href="#" className="hover:text-white">Privacy Policy</a>
               <a href="#" className="hover:text-white">Terms of Use</a>
