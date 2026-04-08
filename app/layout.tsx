@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ModalProvider } from '@/context/ModalContext'
 import QuoteModal from '@/components/QuoteModal'
+import FloatingChat from '@/components/FloatingChat'
 
 export const metadata: Metadata = {
   title: 'SelectQuote Life Insurance — Compare 30+ Carriers, Get Your Best Rate Free',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <ModalProvider>
           {children}
           <QuoteModal />
+          <FloatingChat />
         </ModalProvider>
       </body>
     </html>
