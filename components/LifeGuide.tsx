@@ -20,7 +20,7 @@ export default function LifeGuide() {
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Our AI-powered guide walks you through a personalized conversation to find
-            the right coverage for your family. No pressure, no hassle \u2014 just smart recommendations.
+                        the right coverage for your family. No pressure, no hassle &mdash; just smart recommendations.
           </p>
         </div>
 
