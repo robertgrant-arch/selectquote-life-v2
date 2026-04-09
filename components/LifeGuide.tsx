@@ -1,8 +1,10 @@
 'use client'
+
+import { useModal } from '@/context/ModalContext';
+
 export default function LifeGuide() {
-  const handleOpenChat = () => {
-    window.dispatchEvent(new Event('open-floating-chat'))
-  }
+  const { openModal } = useModal();
+
   return (
     <section id="life-guide" className="relative bg-gradient-to-b from-[#0a1628] via-[#0f1d32] to-[#0a1628] py-16">
       <div className="max-w-5xl mx-auto px-4">
@@ -16,17 +18,17 @@ export default function LifeGuide() {
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Our AI-powered guide walks you through a personalized conversation to find
-            the right coverage for your family. No pressure, no hassle — just smart recommendations.
+            the right coverage for your family. No pressure, no hassle \u2013 just smart recommendations.
           </p>
         </div>
 
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center gap-6 mb-8">
           {[
-            ['Secure & Private'],
-            ['Instant Analysis'],
-            ['No Cost to You'],
-            ['Licensed Advisors'],
+            'Secure & Private',
+            'Instant Analysis',
+            'No Cost to You',
+            'Licensed Advisors',
           ].map(([text]) => (
             <div key={text} className="flex items-center gap-2 text-slate-400 text-sm bg-white/5 rounded-full px-4 py-1.5 border border-white/10">
               <span>{text}</span>
@@ -34,11 +36,11 @@ export default function LifeGuide() {
           ))}
         </div>
 
-        {/* CTA to open floating chat */}
+        {/* CTA to open modal */}
         <div className="text-center">
           <button
-            onClick={handleOpenChat}
-            className="px-10 py-4 bg-[#e8722a] hover:bg-[#d4661f] text-white font-bold rounded-xl text-lg transition-all shadow-lg shadow-[#e8722a]/25 hover:shadow-[#e8722a]/40"
+            onClick={openModal}
+            className="px-10 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all shadow-lg shadow-[#e8722a]/25 hover:shadow-[#e8722a]/40"
           >
             Chat With Your AI Guide
           </button>
