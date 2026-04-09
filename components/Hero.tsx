@@ -1,8 +1,10 @@
-'use client'
+'use client';
+
+import { useModal } from '@/context/ModalContext';
+
 export default function Hero() {
-  const handleStartQuote = () => {
-    window.dispatchEvent(new Event('open-floating-chat'))
-  }
+  const { openModal } = useModal();
+
   return (
     <section className="relative bg-gradient-to-b from-[#0a1628] to-[#0f1d32] pt-24 pb-16 overflow-hidden">
       {/* Background decoration */}
@@ -25,8 +27,8 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
-            onClick={handleStartQuote}
-            className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4661f] text-white font-bold rounded-xl text-lg transition-all shadow-lg shadow-[#e8722a]/25 hover:shadow-[#e8722a]/40"
+            onClick={openModal}
+            className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all shadow-lg shadow-[#e8722a]/25 hover:shadow-[#e8722a]/40"
           >
             Start Your Free Quote
           </button>
