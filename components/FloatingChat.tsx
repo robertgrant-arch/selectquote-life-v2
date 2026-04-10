@@ -47,10 +47,6 @@ export default function FloatingChat() {
             allow="clipboard-write"
           />
 
-          {/* Footer */}
-          <div className="bg-[#0f172a] border-t border-white/10 px-4 py-2 text-center">
-            <p className="text-slate-500 text-xs">Secure · Free · No obligation</p>
-          </div>
         </div>
       )}
 
