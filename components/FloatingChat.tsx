@@ -14,7 +14,7 @@ export default function FloatingChat() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat Panel */}
       {isOpen && (
-        <div className="w-[380px] max-h-[560px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-[#0f172a]">
+        <div className="w-[380px] max-h-[80vh] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-[#0f172a]">
           {/* Header */}
           <div className="flex items-center justify-between bg-[#0f172a] border-b border-white/10 px-4 py-3">
             <div className="flex items-center gap-3">
@@ -42,7 +42,7 @@ export default function FloatingChat() {
           <iframe
             src="https://selectquote-life-guide.vercel.app/guide.html"
             className="w-full border-0"
-            style={{ height: '460px' }}
+            style={{ height: 'calc(80vh - 100px)' }}
             title="SelectQuote Life Guide"
             allow="clipboard-write"
           />
