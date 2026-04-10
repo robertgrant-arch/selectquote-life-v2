@@ -76,8 +76,6 @@ export default function QuoteModal() {
           title="SelectQuote Life Guide"
           allow="clipboard-write"
         />
-
-        </div>
       </div>
     </div>
   );
