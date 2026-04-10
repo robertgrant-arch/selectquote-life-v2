@@ -42,7 +42,7 @@ export default function FloatingChat() {
           <iframe
             src="https://selectquote-life-guide.vercel.app/guide.html"
             className="w-full border-0"
-            style={{ height: 'calc(80vh - 100px)' }}
+            style={{ height: 'calc(80vh - 50px)' }}
             title="SelectQuote Life Guide"
             allow="clipboard-write"
           />
