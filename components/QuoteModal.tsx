@@ -38,7 +38,7 @@ export default function QuoteModal() {
       {/* Modal container */}
       <div
         className="relative z-10 w-full max-w-2xl rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60 flex flex-col"
-        style={{ background: '#0a1628', height: '85vh', maxHeight: '700px' }}
+        style={{ background: '#0a1628', height: '85vh', maxHeight: '90vh' }}
       >
         {/* Header */}
         <div
@@ -77,14 +77,6 @@ export default function QuoteModal() {
           allow="clipboard-write"
         />
 
-        {/* Footer */}
-        <div
-          className="px-5 py-2 border-t border-white/10 text-center"
-          style={{ background: '#0f2a4a' }}
-        >
-          <p className="text-slate-500 text-xs">
-            &#128274; Secure &middot; Free &middot; No Obligation &middot; Licensed agents available
-          </p>
         </div>
       </div>
     </div>
