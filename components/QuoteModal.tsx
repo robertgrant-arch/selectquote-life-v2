@@ -1,16 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useModal } from '@/context/ModalContext';
 
 export default function QuoteModal() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Listen for custom event to open modal
-  useEffect(() => {
-    const handler = () => setIsOpen(true);
-    window.addEventListener('open-quote-modal', handler);
-    return () => window.removeEventListener('open-quote-modal', handler);
-  }, []);
+  const { isOpen, closeModal } = useModal();
 
   // Lock body scroll when open
   useEffect(() => {
@@ -20,17 +14,17 @@ export default function QuoteModal() {
 
   // Close on Escape key
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => e.key === 'Escape' && setIsOpen(false);
+    const handler = (e: KeyboardEvent) => e.key === 'Escape' && closeModal();
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, []);
+  }, [closeModal]);
 
   if (!isOpen) return null;
 
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      onClick={(e) => e.target === e.currentTarget && setIsOpen(false)}
+      onClick={(e) => e.target === e.currentTarget && closeModal()}
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" />
@@ -61,7 +55,7 @@ export default function QuoteModal() {
             </div>
           </div>
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={closeModal}
             className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-colors text-xl"
             aria-label="Close"
           >
