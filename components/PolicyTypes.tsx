@@ -40,7 +40,7 @@ const policies = [
     tag: 'Fast Approval',
     tagColor: 'bg-[#e8722a]/20 text-[#e8722a] border-[#e8722a]/30',
     duration: 'Term or permanent',
-    cost: '$$ \u2013 $$$',
+    cost: '$$ - $$$',
     bestFor: 'People who want quick coverage or have health concerns',
     pros: ['No medical exam required', 'Approval in days, not weeks', 'Available for many health conditions', 'Simplified application'],
     cons: ['Higher premiums than fully underwritten', 'Lower maximum coverage amounts', 'More health questions on application'],
@@ -57,7 +57,7 @@ export default function PolicyTypes() {
           <span className="text-[#e8722a] text-sm font-semibold uppercase tracking-wider">Know Your Options</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 text-white">Which Type of Life Insurance Fits You?</h2>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-            There are several types of life insurance, each designed for different needs and budgets. Here\u2019s an honest breakdown.
+            There are several types of life insurance, each designed for different needs and budgets. Here is an honest breakdown.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export default function PolicyTypes() {
                   <ul className="mt-2 space-y-1">
                     {p.pros.map((pro, j) => (
                       <li key={j} className="text-gray-400 flex items-start gap-1.5">
-                        <span className="text-green-400 mt-0.5">\u2713</span> {pro}
+                        <span className="text-green-400 mt-0.5">&#10003;</span> {pro}
                       </li>
                     ))}
                   </ul>
@@ -99,7 +99,7 @@ export default function PolicyTypes() {
                   <ul className="mt-2 space-y-1">
                     {p.cons.map((con, j) => (
                       <li key={j} className="text-gray-400 flex items-start gap-1.5">
-                        <span className="text-red-400 mt-0.5">\u2717</span> {con}
+                        <span className="text-red-400 mt-0.5">&#10007;</span> {con}
                       </li>
                     ))}
                   </ul>
