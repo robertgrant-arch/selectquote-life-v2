@@ -1,8 +1,12 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import StatsBar from '@/components/StatsBar'
+import WhyLifeInsurance from '@/components/WhyLifeInsurance'
+import CoverageNeeds from '@/components/CoverageNeeds'
+import PolicyTypes from '@/components/PolicyTypes'
 import LifeGuide from '@/components/LifeGuide'
 import HowItWorks from '@/components/HowItWorks'
+import ProcessWalkthrough from '@/components/ProcessWalkthrough'
 import WhySelectQuote from '@/components/WhySelectQuote'
 import AgentSection from '@/components/AgentSection'
 import ComparisonTable from '@/components/ComparisonTable'
@@ -18,8 +22,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <StatsBar />
+      <WhyLifeInsurance />
+      <CoverageNeeds />
+      <PolicyTypes />
       <LifeGuide />
       <HowItWorks />
+      <ProcessWalkthrough />
       <WhySelectQuote />
       <AgentSection />
       <ComparisonTable />
@@ -27,7 +35,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
-              <FloatingChat />
+      <FloatingChat />
     </main>
   )
 }
