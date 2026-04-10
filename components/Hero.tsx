@@ -1,9 +1,9 @@
 'use client';
 
-import { useModal } from '@/context/ModalContext';
-
 export default function Hero() {
-  const { openModal } = useModal();
+  const scrollToEducation = () => {
+    document.getElementById('why-life-insurance')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className="relative bg-gradient-to-b from-[#0a1628] to-[#0f1d32] pt-24 pb-16 overflow-hidden">
@@ -27,14 +27,14 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
-            onClick={openModal}
-            className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all shadow-lg shadow-[#e8722a]/25 hover:shadow-[#e8722a]/40"
+            onClick={scrollToEducation}
+            className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all"
           >
             Start Your Free Quote
           </button>
           <a
             href="tel:1-855-875-3425"
-            className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl text-lg transition-all"
+            className="px-8 py-4 border border-white/20 hover:border-white/40 text-white font-bold rounded-xl text-lg transition-all"
           >
             Call 1-855-875-3425
           </a>
