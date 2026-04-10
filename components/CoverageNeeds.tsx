@@ -4,42 +4,42 @@ import { useModal } from '@/context/ModalContext';
 const scenarios = [
   {
     stage: 'Young & Single',
-    age: '20s\u201330s',
+    age: '20s-30s',
     icon: '\u{1F9D1}',
-    needs: 'Cover student loans, co-signed debts, and funeral costs. Lock in low rates while you\u2019re healthy.',
-    range: '$100K \u2013 $250K',
+    needs: 'Cover student loans, co-signed debts, and funeral costs. Lock in low rates while you are healthy.',
+    range: '$100K - $250K',
     tip: 'Term life is usually the most affordable option at this stage.',
   },
   {
     stage: 'Newly Married',
-    age: '25\u201340',
+    age: '25-40',
     icon: '\u{1F48D}',
     needs: 'Protect your spouse from shared debts like a mortgage, auto loans, and maintain their lifestyle.',
-    range: '$250K \u2013 $500K',
+    range: '$250K - $500K',
     tip: 'Consider coverage for both spouses, even if one earns less.',
   },
   {
     stage: 'Growing Family',
-    age: '28\u201345',
+    age: '28-45',
     icon: '\u{1F46A}',
-    needs: 'Replace your income for 10\u201320 years, cover childcare, education costs, and the mortgage.',
-    range: '$500K \u2013 $1M+',
-    tip: 'A common rule of thumb: 10\u201315x your annual income.',
+    needs: 'Replace your income for 10-20 years, cover childcare, education costs, and the mortgage.',
+    range: '$500K - $1M+',
+    tip: 'A common rule of thumb: 10-15x your annual income.',
   },
   {
     stage: 'Peak Earning Years',
-    age: '40\u201355',
+    age: '40-55',
     icon: '\u{1F4B0}',
     needs: 'Protect your highest-earning years. Cover college tuition, remaining mortgage, and retirement gap for your spouse.',
-    range: '$500K \u2013 $2M',
-    tip: 'Review existing policies\u2014your needs may have grown since you last checked.',
+    range: '$500K - $2M',
+    tip: 'Review existing policies. Your needs may have grown since you last checked.',
   },
   {
     stage: 'Empty Nesters',
-    age: '50\u201365',
+    age: '50-65',
     icon: '\u{1F3E1}',
     needs: 'Focus on final expenses, estate planning, legacy gifts, and ensuring your spouse is financially secure.',
-    range: '$100K \u2013 $500K',
+    range: '$100K - $500K',
     tip: 'Whole or universal life can provide permanent coverage and cash value.',
   },
   {
@@ -47,7 +47,7 @@ const scenarios = [
     age: '65+',
     icon: '\u{1F9D3}',
     needs: 'Cover funeral and burial costs, leave an inheritance, or handle estate taxes.',
-    range: '$10K \u2013 $50K',
+    range: '$10K - $50K',
     tip: 'Guaranteed-issue and simplified-issue policies are available with no medical exam.',
   },
 ];
@@ -61,7 +61,7 @@ export default function CoverageNeeds() {
           <span className="text-[#e8722a] text-sm font-semibold uppercase tracking-wider">Coverage Guide</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 text-white">How Much Life Insurance Do I Need?</h2>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-            There\u2019s no single right answer. The amount you need depends on your life stage, debts, income, and who relies on you. Here\u2019s a starting point.
+            There is no single right answer. The amount you need depends on your life stage, debts, income, and who relies on you. Here is a starting point.
           </p>
         </div>
 
@@ -87,9 +87,9 @@ export default function CoverageNeeds() {
 
         <div className="mt-12 text-center">
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-3">You don\u2019t need to know the exact number today</h3>
+            <h3 className="text-2xl font-bold text-white mb-3">You don't need to know the exact number today</h3>
             <p className="text-gray-400 mb-6">
-              Our licensed agents help you calculate the right amount based on your actual financial picture\u2014income, debts, dependents, and goals. Start a conversation and we\u2019ll narrow it down together.
+              Our licensed agents help you calculate the right amount based on your actual financial picture &mdash; income, debts, dependents, and goals. Start a conversation and we'll narrow it down together.
             </p>
             <button onClick={openModal} className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all">
               Estimate My Coverage
