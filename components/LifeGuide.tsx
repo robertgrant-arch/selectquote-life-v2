@@ -1,11 +1,11 @@
 'use client';
 
+import { useModal } from '@/context/ModalContext';
+
 const badges = ['Secure & Private', 'Instant Analysis', 'No Cost to You', 'Licensed Advisors'];
 
 export default function LifeGuide() {
-  const handleOpenModal = () => {
-    window.dispatchEvent(new Event('open-quote-modal'));
-  };
+  const { openModal } = useModal();
 
   return (
     <section id="life-guide" className="relative bg-gradient-to-b from-[#0a1628] via-[#0f1d32] to-[#0a1628] py-16">
@@ -20,7 +20,7 @@ export default function LifeGuide() {
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Our AI-powered guide walks you through a personalized conversation to find
-                        the right coverage for your family. No pressure, no hassle &mdash; just smart recommendations.
+            the right coverage for your family. No pressure, no hassle &mdash; just smart recommendations.
           </p>
         </div>
 
@@ -36,8 +36,8 @@ export default function LifeGuide() {
         {/* CTA to open modal */}
         <div className="text-center">
           <button
-            onClick={handleOpenModal}
-            className="px-10 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all shadow-lg shadow-[#e8722a]/25 hover:shadow-[#e8722a]/40"
+            onClick={openModal}
+            className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all"
           >
             Chat With Your AI Guide
           </button>
@@ -50,9 +50,7 @@ export default function LifeGuide() {
         <div className="text-center mt-8">
           <p className="text-slate-500 text-sm">
             Prefer to talk to someone? Call{' '}
-            <a href="tel:1-855-875-3425" className="text-[#e8722a] font-semibold hover:underline">
-              1-855-875-3425
-            </a>
+            <a href="tel:1-855-875-3425" className="text-[#e8722a] hover:underline font-semibold">1-855-875-3425</a>
           </p>
         </div>
       </div>
