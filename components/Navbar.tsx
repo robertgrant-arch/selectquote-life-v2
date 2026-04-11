@@ -1,9 +1,9 @@
 'use client'
 
+import { useModal } from '@/context/ModalContext';
+
 export default function Navbar() {
-  const scrollToEducation = () => {
-    document.getElementById('why-life-insurance')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { openModal } = useModal();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-[#0f2a4a]/95 backdrop-blur-sm border-b border-white/10">
@@ -28,7 +28,7 @@ export default function Navbar() {
               <span className="mr-1">&#9742;</span> 1-800-777-8353
             </a>
             <button
-              onClick={scrollToEducation}
+              onClick={openModal}
               className="bg-[#e8722a] hover:bg-[#d4611f] text-white px-5 py-2 rounded-full text-sm font-semibold transition-all"
             >
               Get Free Quote
