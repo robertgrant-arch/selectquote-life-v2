@@ -13,7 +13,6 @@ export default function ComparisonTable() {
     'Unbiased Recommendations',
     'Side-by-Side Policy Comparison',
   ]
-
   return (
     <section id="comparison" className="py-20 bg-[#0a1f38]">
       <div className="max-w-4xl mx-auto px-4">
@@ -22,7 +21,6 @@ export default function ComparisonTable() {
           <h2 className="text-4xl md:text-5xl font-bold mt-4">SelectQuote vs. buying direct</h2>
           <p className="text-gray-400 mt-4">See why millions of Americans choose SelectQuote over going directly to a single carrier.</p>
         </div>
-
         <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
           <div className="grid grid-cols-3 bg-white/5 p-4">
             <div className="text-sm text-gray-400 font-semibold">Feature</div>
@@ -38,15 +36,14 @@ export default function ComparisonTable() {
           {features.map((f, i) => (
             <div key={i} className="grid grid-cols-3 p-4 border-t border-white/5">
               <div className="text-sm text-gray-300">{f}</div>
-              <div className="text-center text-green-400 text-lg">\u2713</div>
-              <div className="text-center text-red-400 text-lg">\u2717</div>
+              <div className="text-center text-green-400 text-lg">✓</div>
+              <div className="text-center text-red-400 text-lg">✗</div>
             </div>
           ))}
         </div>
-
         <div className="text-center mt-10">
           <button onClick={openModal} className="bg-[#e8722a] hover:bg-[#d4611f] text-white px-8 py-3 rounded-full font-semibold transition-colors">
-            Start Comparing Rates Free \u2192
+            Start Comparing Rates Free →
           </button>
           <p className="text-gray-500 text-sm mt-3">No credit card required. No obligation.</p>
         </div>
