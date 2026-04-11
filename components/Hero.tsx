@@ -1,9 +1,9 @@
 'use client';
 
+import { useModal } from '@/context/ModalContext';
+
 export default function Hero() {
-  const scrollToEducation = () => {
-    document.getElementById('why-life-insurance')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { openModal } = useModal();
 
   return (
     <section className="relative bg-gradient-to-b from-[#0a1628] to-[#0f1d32] pt-24 pb-16 overflow-hidden">
@@ -22,12 +22,11 @@ export default function Hero() {
           <span className="text-[#e8722a]">Simple</span>
         </h1>
         <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-          Our AI-powered assistant guides you through a quick conversation to find the
-          perfect coverage for your family. Get personalized recommendations in minutes.
+          Our AI-powered assistant guides you through a quick conversation to find the perfect coverage for your family. Get personalized recommendations in minutes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
-            onClick={scrollToEducation}
+            onClick={openModal}
             className="px-8 py-4 bg-[#e8722a] hover:bg-[#d4611f] text-white font-bold rounded-xl text-lg transition-all"
           >
             Start Your Free Quote
