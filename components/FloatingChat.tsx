@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import AIGuidedChat from './AIGuidedChat'
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,18 +15,18 @@ export default function FloatingChat() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat Panel */}
       {isOpen && (
-        <div className="w-[380px] max-h-[80vh] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-[#0f172a]">
+        <div className="w-[400px] max-h-[85vh] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 bg-[#0f172a] flex flex-col">
           {/* Header */}
-          <div className="flex items-center justify-between bg-[#0f172a] border-b border-white/10 px-4 py-3">
+          <div className="flex items-center justify-between border-b border-white/10 px-4 py-3" style={{ background: '#0f2a4a' }}>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-[#e8722a]/20 flex items-center justify-center">
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'rgba(232,114,42,0.2)' }}>
                 <span className="text-[#e8722a] font-bold text-sm">SQ</span>
               </div>
               <div>
                 <p className="text-white text-sm font-semibold">SelectQuote Life Guide</p>
                 <div className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-                  <p className="text-slate-400 text-xs">AI-Powered · Free · No Obligation</p>
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
+                  <p className="text-slate-400 text-xs">AI-Powered &middot; Free &middot; No Obligation</p>
                 </div>
               </div>
             </div>
@@ -34,19 +35,14 @@ export default function FloatingChat() {
               className="text-slate-400 hover:text-white transition-colors w-7 h-7 flex items-center justify-center rounded-md hover:bg-white/10"
               aria-label="Close chat"
             >
-              ×
+              &times;
             </button>
           </div>
 
-          {/* Chat Body - iframe */}
-          <iframe
-            src="https://selectquote-life-guide.vercel.app/guide.html"
-            className="w-full border-0"
-            style={{ height: 'calc(80vh - 50px)' }}
-            title="SelectQuote Life Guide"
-            allow="clipboard-write"
-          />
-
+          {/* Chat Body - built-in AI Guided Chat */}
+          <div className="flex-1 overflow-hidden" style={{ height: 'calc(80vh - 60px)' }}>
+            <AIGuidedChat onClose={() => setIsOpen(false)} />
+          </div>
         </div>
       )}
 
@@ -56,7 +52,7 @@ export default function FloatingChat() {
         className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
           isOpen
             ? 'bg-slate-700 hover:bg-slate-600'
-            : 'bg-[#e8722a] hover:bg-[#d4661f] shadow-[#e8722a]/30'
+            : 'bg-[#e8722a] hover:bg-[#d4611f] shadow-[#e8722a]/30'
         }`}
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
       >
