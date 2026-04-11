@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useModal } from '@/context/ModalContext';
+import AIGuidedChat from './AIGuidedChat';
 
 export default function QuoteModal() {
   const { isOpen, closeModal } = useModal();
@@ -63,13 +64,10 @@ export default function QuoteModal() {
           </button>
         </div>
 
-        {/* Iframe */}
-        <iframe
-          src="https://selectquote-life-guide.vercel.app/guide.html"
-          className="flex-1 w-full border-0"
-          title="SelectQuote Life Guide"
-          allow="clipboard-write"
-        />
+        {/* AI Guided Chat */}
+        <div className="flex-1 overflow-hidden">
+          <AIGuidedChat onClose={closeModal} />
+        </div>
       </div>
     </div>
   );
